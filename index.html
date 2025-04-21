@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toubit Crypto Exchange</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .wallet-box {
+      background: #2d2d2d;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+    .highlight {
+      color: #00ffcc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Toubit</h1>
+    <h2>Get $500 Free Bonus!</h2>
+    <form id="registerForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div id="accountInfo" style="display:none;">
+      <p><strong>Balance:</strong> <span class="highlight">$500 (Bonus)</span></p>
+      <p><strong>Note:</strong> To withdraw your bonus, please deposit at least <span class="highlight">$100</span>.</p>
+
+      <div class="wallet-box">
+        <p><strong>Deposit Method:</strong> USDT only (TRC20 Network)</p>
+        <p><strong>TRC20 Wallet Address:</strong></p>
+        <p class="highlight">TXVU4NzUriTvdcTGHUBHRenJSTuYcBgzKN</p>
+        <p>Please make sure to send exactly $100 or more in USDT (TRC20) to activate your withdrawal eligibility.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('registerForm');
+    const accountInfo = document.getElementById('accountInfo');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      accountInfo.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
